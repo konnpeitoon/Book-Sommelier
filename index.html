@@ -5,8 +5,8 @@
   </header>
  <body>
    <div id="app">
-     <h1>漫画喫茶ソムリエおすすめ！</h1>
-     <h1>最高の漫画喫茶5選！</h1>
+     <h1>美大からエンジニアが読む</h1>
+     <h1>読書禄</h1>
       <p class="msg">{{msg}}</p>
       <!-- <button @click="sayHello">Hi!</button> -->
       <div class="container">
@@ -19,29 +19,24 @@
      new Vue({
        el: "#app",
        data: {
-         msg: `みなさんこんにちわ。漫画喫茶ソムリエのなつと申します。\n`+
-              `漫画喫茶というとどんなイメージですか？「汚い」「臭い」「うるさい」...\n` +
-              `居心地悪いイメージを持たれている方も多いと思います。\n` +
-              `ですが、失礼ながらその考えは古いです。\nそれらの漫画喫茶はひと昔前のお話です。\n` +
-              `今の漫画喫茶は、もしかしたらホテルよりも快適に過ごせることができるのです。\n` +
-              `日々の生活が潤う、極上の漫画喫茶ライフをご提案させていただきます。\n`,
+         msg: '本を読んで気づいたこと、面白かったことをまとめます。',
          array: [
             { id:"card1",
               imgurl:"",
-              title: "快活クラブ",
-              sub: "快活クラブはリラックスルームのほうがおすすめ",
+              title: "多動力",
+              sub: "",
               linkurl: "./article/kaikatsu.html",
             },
             { id:"card2",
               imgurl:"",
-              title: "DAICE",
-              sub: "エポスカードなら100円引き",
+              title: "AIvs教科書が読めない子供たち",
+              sub: "読書中",
               linkurl: "./article/dice.html",
             },
             { id:"card3",
               imgurl:"",
-              title: "漫画喫茶げらげら",
-              sub: "あまりきれいじゃないけど安い",
+              title: "PDCAサイクル",
+              sub: "",
               linkurl: "./article/geragera.html",
             },
          ],
