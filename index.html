@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html>
+  <header>
+    <link href="./index.css" rel="stylesheet" type="text/css">
+  </header>
  <body>
    <div id="app">
-     <p>{{msg}}</p>
-     <button @click="sayHello">Hi!</button>
+     <h1>漫画喫茶ソムリエおすすめ！</h1>
+     <h1>最高の漫画喫茶5選！</h1>
+      <p class="msg">{{msg}}</p>
+      <!-- <button @click="sayHello">Hi!</button> -->
+      <div class="container">
+        <my-article  v-for="item in array" v-bind:key="item.id"　:val="item"></my-article>
+      </div>
    </div>
    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+   <script src="./my-article.js"></script>
    <script>
      new Vue({
        el: "#app",
        data: {
-         msg: "Welcome"
+         msg: `みなさんこんにちわ。漫画喫茶ソムリエのなつと申します。\n`+
+              `漫画喫茶というとどんなイメージですか？「汚い」「臭い」「うるさい」...\n` +
+              `居心地悪いイメージを持たれている方も多いと思います。\n` +
+              `ですが、失礼ながらその考えは古いです。\nそれらの漫画喫茶はひと昔前のお話です。\n` +
+              `今の漫画喫茶は、もしかしたらホテルよりも快適に過ごせることができるのです。\n` +
+              `日々の生活が潤う、極上の漫画喫茶ライフをご提案させていただきます。\n`,
+         array: [
+            { id:"card1",
+              imgurl:"",
+              title: "快活クラブ",
+              sub: "快活クラブはリラックスルームのほうがおすすめ",
+              linkurl: "./article/kaikatsu.html",
+            },
+            { id:"card2",
+              imgurl:"",
+              title: "DAICE",
+              sub: "エポスカードなら100円引き",
+              linkurl: "./article/dice.html",
+            },
+            { id:"card3",
+              imgurl:"",
+              title: "漫画喫茶げらげら",
+              sub: "あまりきれいじゃないけど安い",
+              linkurl: "./article/geragera.html",
+            },
+         ],
        },
        methods: {
          sayHello(){
@@ -23,4 +57,4 @@
      })
    </script>
  </body>
- </html>
+</html>

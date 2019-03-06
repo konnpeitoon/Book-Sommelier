@@ -1,0 +1,130 @@
+
+html{
+    background-color: #fafbfc;
+}
+h1{
+    margin:auto;
+    width: 70%;
+    text-align: center;
+}
+.msg{
+    width: 70%;
+    margin:auto;
+    padding: 20px;
+    color: #24292e;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    /* text-align: center; */
+    background: white;
+    font-size: 14px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card {
+    width: 275px;
+
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+
+    transition: all .125s;
+    transform: scale(1);
+    transition-duration:0.1s;
+    padding: 10px;
+  }
+  .card a{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    text-indent:-999px;
+}
+.card:hover{
+    transform: scale(1.05);
+    transition-duration:0.1s;
+}
+  /* Elements */
+.card__wrapper {
+    padding-top: .1px;
+    padding-bottom: .1px;
+    position: relative;
+
+    background-color: #ffffff;
+    color: #999999;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.05);
+  }
+  .card__wrapper:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    right: 15px;
+    bottom: 0;
+    left: 15px;
+
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.2);
+    transition: all .125s;
+    transform: scale(1) translateY(0px);
+  }
+  .card__box {
+    padding-right: 35px;
+    padding-left: 35px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .card__item  {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .card__item--small  {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .card__feature {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .card__img {
+    display: block;
+    max-width: 100%;
+    height: 240px;
+    width: 275px;
+  }
+  .card__header {
+    position: relative;
+    z-index: 1;
+  }
+  .card__title {
+    color: #222222;
+
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+  .card__label {
+    color: #cccccc;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+  }
+  .card__divider {
+    display: block;
+    width: 100%;
+    height: 15px;
+
+    border: none;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyOHB4IiBoZWlnaHQ9IjE1cHgiIHZpZXdCb3g9IjAgMCAyOCAxNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjggMTUiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiNERURFREUiIGQ9Ik0yNy41LDdoLTZDMjEuMiwzLjEsMTgsMCwxNCwwUzYuOCwzLjEsNi41LDdoLTZDMC4yLDcsMCw3LjIsMCw3LjVTMC4yLDgsMC41LDhoNmMwLjMsMy45LDMuNSw3LDcuNSw3czcuMi0zLjEsNy41LTdoNkMyNy44LDgsMjgsNy44LDI4LDcuNVMyNy44LDcsMjcuNSw3eiBNMTQsMWMzLjQsMCw2LjIsMi42LDYuNSw2SDcuNUM3LjgsMy42LDEwLjYsMSwxNCwxeiBNMTQsMTRjLTMuNCwwLTYuMi0yLjYtNi41LTZoMTIuOUMyMC4yLDExLjQsMTcuNCwxNCwxNCwxNHoiLz48L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .card__body {
+    font-size: 12px;
+    line-height: 1.75;
+  }
