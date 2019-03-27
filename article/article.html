@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link href="../article.css" rel="stylesheet" type="text/css">
+        <title></title>
+    </header>
+    <body>
+        <div id="app">
+            <pre id="disp"></pre>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script type="text/javascript">
+        new Vue({
+       el: "#app",
+       data: {
+           file: null,
+           xmlHttp: null,
+       },
+       computed:{
+       },
+       methods:{
+        loadText:function(){
+            if (window.XMLHttpRequest){
+            xmlHttp = new XMLHttpRequest();
+            }else{
+                if (window.ActiveXObject){
+                    xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }else{
+                    xmlHttp = null;
+                }
+            }
+            xmlHttp.onreadystatechange = this.checkStatus;
+            xmlHttp.open("GET", this.file, true);
+            xmlHttp.send(null);
+        },
+        checkStatus:function(){
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+            var node = document.getElementById("disp");
+            console.log("check");
+            node.innerHTML = xmlHttp.responseText;
+            }
+        }
+
+       },
+       mounted(){
+            let data = location.href.split("?")[1];
+            let idpage = decodeURIComponent( data.split("=")[1] );
+            //FileReaderの作成
+            var reader = new FileReader();
+            this.file = "./"+idpage+".txt";
+            console.log(idpage);
+            console.log(this.file);
+            this.loadText();
+        }
+     })
+    </script>
+</html>
