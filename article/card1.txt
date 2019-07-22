@@ -1,5 +1,5 @@
 aaaaaaaaaaaaaaaaaaaaaaaaa
-<p style="color=red">aaaaaaaaaaaaaaaaaaaaaaaaa</p>
+<font size="20px" color="red">テキスト</font>
 
 bbbbbbbbb
 
